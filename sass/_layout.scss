@@ -1,0 +1,547 @@
+//cubic-bezier(.95,.01,0,.98)
+.section {
+    max-width: 100vw;
+    height: 100vh;
+    margin-bottom: 2rem;
+
+    &-small {
+        max-width: 100vw;
+        min-height: 35vh;
+        margin-bottom: 25rem;
+    }
+    
+    &-large {
+        max-width: 100vw;
+        height: auto;
+        margin-bottom: 4rem;
+    }
+    
+    &-custom {
+        max-width: 100vw;
+        height: 30vh;
+        
+    }
+}
+
+
+
+
+/////////////////////////////////////////
+// HEADER SECTION
+.header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'Pacifico';
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: $main-color-blue;
+    padding: 1rem;
+
+    &:hover {
+        color: $main-color-red;
+    }
+}
+
+
+.nav {
+    font-size: 1.8rem;
+    padding: 1rem;
+}
+
+.navLink {
+    text-decoration: none;
+    font-family: $main-font;
+    font-weight: 300;
+    padding: 1rem;
+    color: $main-color-red;
+}
+
+.navLink:hover {
+    color: $main-color-blue;
+}
+
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to left top, rgba(47, 102, 144, .8), rgba(50, 107, 149, .8), rgba(52, 113, 155, .9), rgba(55, 118, 160, .7), rgba(58, 124, 165, .9));
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+
+
+    &__link {
+        text-decoration: none;
+        font-size: 4rem;
+        font-family: 'Baloo Tamma';
+        color: $alt-background-black;
+
+        &:hover {
+            color: $main-color-vermillion;
+        }
+    }
+}
+
+.showOverlay {
+    display: flex;
+    z-index: 1;
+}
+
+.close-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.close-img {
+    width: 5rem;
+    height: 5rem;
+    fill: #222;
+}
+
+.overlaySlide {
+    animation: overlaySlide 1s cubic-bezier(.86, .36, 0, .98) forwards;
+}
+
+/////////////////////////////////////////
+// ABOUT SECTION
+
+.about {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    padding-right: 25%;
+    padding-left: 25%;
+    margin-top: 10rem;
+    margin-bottom: 0;
+
+    &-heading {
+        width: 9rem;
+        font-size: 3rem;
+        font-weight: 500;
+        font-family: $main-font;
+        margin-bottom: 2rem;
+        border-bottom: .3rem solid $main-color-red;
+
+        &_sub {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            font-size: 1.8rem;
+            font-family: $main-font;
+        }
+    }
+
+    &-para {
+        font-size: 1.7rem;
+        font-family: $main-font;
+        color: $main-background-grey;
+        font-weight: 500;
+    }
+
+    &-btn {
+
+        &:hover {
+            animation: raise .2s ease-out forwards;
+        }
+    }
+}
+
+/////////////////////////////////////////
+// PROJECTS SECTION
+
+.projects {
+    margin: 0 auto;
+    margin-bottom: 10rem;
+    max-width: 100%;
+    min-height: 100vh;
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    font-family: $main-font;
+    z-index: 12;
+    
+    &-title {
+        width: 15%;
+        font-size: 4rem;
+        flex-basis: auto;
+        margin-bottom: 6rem;
+        color: $font-color-grey;
+        border-bottom: .3rem solid $font-color-grey;
+    }
+
+
+    &-heading {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        color: $main-color-flatred;
+    }
+
+    &-1,
+    &-2,
+    &-3 {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 2rem;
+        border: .1rem solid;
+        padding: 1rem .5rem;
+        border-radius: .5rem;
+        box-shadow: $main-box-shadow;
+        background-image: linear-gradient(to right top, #3a7ca5, #3776a0, #34719b, #326b95, #2f6690);
+
+        &_circle-outer {
+            height: 22rem;
+            width: 22rem;
+            border: .5rem solid $main-color-flatred;
+            border-radius: 50%;
+            z-index: 10;
+            overflow: hidden;
+
+        }
+
+        &_circle-inner-1 {
+            background-image: url(/img/Weather_LocationApp.png);
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: 200%;
+            height: 22rem;
+            width: 22rem;
+            filter: grayscale(.8);
+            transition: all .2s ease-in;
+            overflow: hidden;
+
+            &:hover {
+                background-size: 171%;
+                transition: all .2s ease-in;
+                filter: grayscale(.1);
+            }
+        }
+
+        &_text {
+            align-self: center;
+            padding-left: 2rem;
+            width: 60%;
+            font-size: 1.5rem;
+            color: $font-color-grey;
+        }
+    }
+
+    &-2 {
+
+
+        &_circle-outer {
+            height: 22rem;
+            width: 22rem;
+            border: .5rem solid $main-color-flatred;
+            border-radius: 50%;
+            z-index: 10;
+            overflow: hidden;
+        }
+
+        &_circle-inner-2 {
+            background-image: url(/img/To-DoList.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 200%;
+            height: 22rem;
+            width: 22rem;
+            filter: grayscale(.8);
+            transition: all .2s ease-in;
+            overflow: hidden;
+
+            &:hover {
+                background-size: 175%;
+                transition: all .2s ease-in;
+                filter: grayscale(.1);
+            }
+        }
+    }
+    
+    &-3 {
+        
+        
+        &_circle-outer {
+            
+        }
+        
+        &_circle-inner-3 {
+            background-image: url(/img/DrumMachine.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 200%;
+            height: 22rem;
+            width: 22rem;
+            filter: grayscale(.8);
+            transition: all .2s ease-in;
+            overflow: hidden;
+            
+            &:hover {
+                background-size: 170%;
+                transition: all .2s ease-in;
+                filter: grayscale(.1);
+            }
+        }
+    }
+}
+
+
+/////////////////////////////
+// CONTACT SECTION
+
+.contact { 
+    max-width: 100%;
+    height: 30rem;
+    font-family: $main-font;
+    
+   
+
+    
+    &-form {
+        margin: 0 auto;
+        width: 50%;
+        text-align: center;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        
+        
+        &_heading {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+    }
+    
+}
+
+.inputs {
+    margin: 0 auto;
+    height: 3rem;
+    width: 100%;
+    border-radius: .2rem;
+    border-left: .1rem solid $main-color-blue;
+    border-right: .1rem solid $main-color-blue;
+    border-top: .1rem solid $main-color-blue;
+    border-bottom: .2rem solid $main-color-blue;
+
+    
+    &:focus {
+        border-bottom: .3rem solid $main-color-red;
+    }
+    
+    &::placeholder {
+        font-size: 1.3rem;
+        margin-left: 1rem;
+    }
+}
+
+
+
+/////////////////////////////////////////
+// FOOTER SECTION
+
+.footer {
+    max-width: 100vw;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+    &-menu {
+        width: 80%;
+        margin: 0 auto;
+        height: 30rem;
+        
+        &_link {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////
+// MEDIA QUERIES
+
+@media (max-width: 680px) {
+    .projects {
+        padding: 0 0;
+    }
+    
+    .contact {
+        
+        
+        &-form {
+            width: 70%;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+        }
+    }
+
+}
+
+@media (max-width: 550px) {
+    .projects {
+        margin-bottom: 4rem;
+        
+        &-1, &-2, &-3 {
+            margin: 0 auto;
+            width: 80%;
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-content: center;
+            text-align: justify;
+            
+            &_circle-outer {
+                align-self: center;
+            }
+            
+            &_text {
+                width: 100%;
+                padding-right: 2rem;
+            }
+        }
+    }
+    
+    .about {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    
+    .contact {
+        
+        &-form {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+            padding: 1rem;
+            
+        }
+        
+    }
+    
+    .inputs {
+        margin-bottom: 1rem;
+    }
+    
+    .btn-contact {
+        width: 100%;
+    }
+}
+
+@media (max-width: 460px) {
+
+    .title-container__title,
+    .title-container__sub-title {
+        font-size: 5rem;
+    }
+
+    .title-line {
+        font-size: 1.8rem;
+    }
+    
+    .projects {
+        
+        &-1, &-2, &-3 {
+            margin: 0 auto;
+        }
+    }
+    
+    .projects-1_text {
+        margin: 0 auto;
+        width: 90%;
+        padding: .2rem 0;
+    }
+    .contact {
+        
+        
+        &-form {
+            
+        }
+    }
+    .btn-contact {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .navLink {
+        display: none;
+    }
+
+    .toggle {
+        display: inherit;
+        margin-top: -1rem;
+        margin-right: -1rem;
+        fill: $main-color-vermillion;
+        z-index: 20;
+    }
+    
+    .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        &-form {
+           display: inherit;
+           align-content: center;
+
+        }
+    }
+    
+    .inputs {
+        width: 100%;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

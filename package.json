@@ -1,0 +1,14 @@
+{
+  "name": "portfolio-v3",
+  "version": "1.0.0",
+  "description": "portfolio with more design features and interactivity",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/styles.css -w"
+  },
+  "author": "EstenGrove",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.9.4"
+  }
+}

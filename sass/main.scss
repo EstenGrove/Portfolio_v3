@@ -1,0 +1,56 @@
+//////////////////////////////////
+// MAIN FONT
+$main-font: 'Nunito', sans-serif;
+
+
+//////////////////////////////////
+// MAIN PALETTE
+
+$main-color-blue: #5CBCEA;
+$main-color-red: #eb2f64;
+$main-color-vermillion: #d7263d;
+$main-color-flatred: #e84855;
+$main-background-grey: #403f4c;
+
+$main-color-orange: #f46036;
+$main-color-purple: #2e294e;
+
+
+////////////////////////////////
+// FONT COLOR
+$font-color-grey: #dad2d8;
+
+
+///////////////////////////////
+// BACKGROUND COLORS
+$alt-background-blue: #011936;
+$alt-background-black: #221d23;
+
+///////////////////////////////
+// ICON COLORS
+$font-alt-blue-dark: #2f6690;
+$font-alt-blue-light: #3a7ca5;
+
+
+///////////////////////////////
+// ACCENT & GRADIENT COLORS
+$accent-main-red: #d7263d;
+$accent-red-light: #FF3366;
+$accent-red-dark: #BA265D;
+$accent-orangered: #e84855;
+
+//////////////////////////////
+// MAIN CLIP-PATH
+$main-clip-path: polygon(0 0, 100% 0, 100% 86%, 25% 100%, 0 85%);
+
+$reverse-clip-path: polygon(0 100%, 100% 100%, 100% 46%, 25% 60%, 0 45%);
+    
+$main-box-shadow: 3px 10px 20px -4px rgba(0,0,0,0.75);
+
+
+
+@import "animations";
+@import "base";
+@import "components";
+@import "layout";
+

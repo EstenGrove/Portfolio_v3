@@ -1,0 +1,32 @@
+/////////////////////////////////////////
+// MAIN BTN ANIMATION
+
+@keyframes raise {
+    0% {
+        transform: translateY() scale();
+    }
+    100% {
+        transform: translateY(-.5rem) scale(1.01);
+    }
+}
+
+
+
+
+/////////////////////////////////////////
+// OVERLAY MENU ITEMS SLIDE IN
+
+@keyframes overlaySlide {
+    0% {
+        transform: translateX(-300rem);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(-150rem);
+        opacity: .6;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
